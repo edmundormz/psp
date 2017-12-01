@@ -1,3 +1,40 @@
+/******************************************************************/
+/* Program Assignment:  2                                         */
+/* Name: Héctor Edmundo Ramírez Gómez
+/* Date: November 30 2017
+/* Description: This program gets a set of n real numbers and 
+/*              calculates the mean and standard deviation
+/******************************************************************/
+
+/******************************************************************/
+/* Listing Contents:                                              
+      Reuse instructions
+
+        void InitList(struct list *sList)
+            Purpose: initialize a linked list with first node element
+
+        void push(struct list *sList, float data)
+            Purpose: Adds a value to the front of the list
+
+        void print(struct list *sList)
+            Purpose: Prints the list
+
+        void calc_mean(struct list *sList)
+            Purpose: Calculates the mean of the data set
+
+        void calc_std_dev(struct list *sList)
+            Purpose: Calculates the standard deviation of the data set
+
+      Compilation instructions                                     
+        g++ <this_file> -o <output_file>
+      Includes                                                     
+        stdio.h
+        stdlib.h
+        math.h
+        iostream
+
+/******************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -34,7 +71,6 @@ void InitList(struct list *sList)
     sList->start = NULL;
 }
 
- /* Adds a value to the front of the list */
 void push(struct list *sList, float data)
 {
     struct node *p;
@@ -44,7 +80,6 @@ void push(struct list *sList, float data)
     sList->start = p;
 }
 
-/* Prints the list */
 void print(struct list *sList)
 {
     struct node *p = sList->start;
